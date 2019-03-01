@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaiduMapWebservice_CSharp", "BaiduWebservice_CSharp\BaiduMapWebservice_CSharp.csproj", "{6A0A28E2-F304-47FB-BA61-CCE2D21DA50D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaiduMapWebservice_CSharp_Test", "BaiduWebservice_CSharp_Test\BaiduMapWebservice_CSharp_Test.csproj", "{FB9D04E5-07EF-4064-AB0F-CBD936392002}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A0A28E2-F304-47FB-BA61-CCE2D21DA50D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A0A28E2-F304-47FB-BA61-CCE2D21DA50D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A0A28E2-F304-47FB-BA61-CCE2D21DA50D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A0A28E2-F304-47FB-BA61-CCE2D21DA50D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB9D04E5-07EF-4064-AB0F-CBD936392002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB9D04E5-07EF-4064-AB0F-CBD936392002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB9D04E5-07EF-4064-AB0F-CBD936392002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB9D04E5-07EF-4064-AB0F-CBD936392002}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F29AB03-D213-4B55-94AB-3A8691E445C0}
+	EndGlobalSection
+EndGlobal
