@@ -42,6 +42,7 @@ namespace BaiduMap.Tests
             Assert.IsTrue(result.addressComponent.district == "天河区");
             Assert.IsTrue(result.Location.Lng.HasValue);
             Assert.IsTrue(result.Location.Lat.HasValue);
+            Assert.IsTrue(result.business != null);
             Assert.IsTrue(result.pois.Count > 0);
 
             result = BaiduMapClientUtil.GetAddressInfo(client, "广东省广州市海珠区新港东路磨碟沙大道118号珠江啤酒厂文化创意园琶醍B区103");
@@ -51,6 +52,7 @@ namespace BaiduMap.Tests
             Assert.IsTrue(result.addressComponent.district == "海珠区");
             Assert.IsTrue(result.Location.Lng.HasValue);
             Assert.IsTrue(result.Location.Lat.HasValue);
+            Assert.IsTrue(result.business != null);
             Assert.IsTrue(result.pois.Count > 0);
 
             result = BaiduMapClientUtil.GetAddressInfo(client, "北京市海淀区上地十街10号");
@@ -58,6 +60,7 @@ namespace BaiduMap.Tests
             Assert.IsTrue(result.addressComponent.city == "北京市");
             Assert.IsTrue(result.addressComponent.province == "北京市");
             Assert.IsTrue(result.addressComponent.district == "海淀区");
+            Assert.IsTrue(result.business != null);
             Assert.IsTrue(result.Location.Lng.HasValue);
             Assert.IsTrue(result.Location.Lat.HasValue);
             Assert.IsTrue(result.pois.Count > 0);
@@ -69,6 +72,7 @@ namespace BaiduMap.Tests
             Assert.IsTrue(result.addressComponent.city == "广州市");
             Assert.IsTrue(result.addressComponent.district == "天河区");
             Assert.IsTrue(result.Location.Lng.HasValue);
+            Assert.IsTrue(result.business != null);
             Assert.IsTrue(result.Location.Lat.HasValue);
             Assert.IsTrue(result.pois.Count > 0);
 
@@ -80,6 +84,7 @@ namespace BaiduMap.Tests
             Assert.IsTrue(result.addressComponent.district == "天河区");
             Assert.IsTrue(result.Location.Lng.HasValue);
             Assert.IsTrue(result.Location.Lat.HasValue);
+            Assert.IsTrue(result.business != null);
             Assert.IsTrue(result.pois.Count > 0);
             Assert.IsTrue(result.pois[0].name == "侨鑫国际"); 
 
@@ -89,6 +94,7 @@ namespace BaiduMap.Tests
             Assert.IsTrue(result.addressComponent.city == "广州市");
             Assert.IsTrue(result.addressComponent.district == "天河区");
             Assert.IsTrue(result.Location.Lng.HasValue);
+            Assert.IsTrue(result.business != null);
             Assert.IsTrue(result.Location.Lat.HasValue);
             Assert.IsTrue(result.pois.Count > 0);
 
@@ -97,6 +103,7 @@ namespace BaiduMap.Tests
             Assert.IsTrue(result.addressComponent.province == "广东省");
             Assert.IsTrue(result.addressComponent.city == "广州市");
             Assert.IsTrue(result.addressComponent.district == "天河区");
+            Assert.IsTrue(result.business != null);
             Assert.IsTrue(result.Location.Lng.HasValue);
             Assert.IsTrue(result.Location.Lat.HasValue);
             Assert.IsTrue(result.pois.Count > 0);
