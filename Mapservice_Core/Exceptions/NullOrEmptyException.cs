@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace BaiduMap.Exceptions
+namespace Mapservice_Core.Exceptions
 {
     public class NullOrEmptyException : Exception
     {

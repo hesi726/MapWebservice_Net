@@ -1,6 +1,6 @@
-﻿using BaiduMap.Extensions;
-using BaiduMap.Request;
+﻿using BaiduMap.Request;
 using BaiduMap.Response;
+using Mapservice_Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,43 +40,8 @@ namespace BaiduMap.Util
             }
         }
 
-        /// <summary>
-        /// Url编码;
-        /// </summary>
-        /// <param name="str"></param>
-        /// <returns></returns>
-        private static string UrlEncode(string str)
-        {
-            str = System.Web.HttpUtility.UrlEncode(str);
-            byte[] buf = Encoding.ASCII.GetBytes(str);//等同于Encoding.ASCII.GetBytes(str)
-            for (int i = 0; i < buf.Length; i++)
-                if (buf[i] == '%')
-                {
-                    if (buf[i + 1] >= 'a') buf[i + 1] -= 32;
-                    if (buf[i + 2] >= 'a') buf[i + 2] -= 32;
-                    i += 2;
-                }
-            return Encoding.ASCII.GetString(buf);//同上，等同于Encoding.ASCII.GetString(buf)
-        }
-
-        /// <summary>
-        /// 构建查询参数;
-        /// </summary>
-        /// <param name="querystring_arrays"></param>
-        /// <returns></returns>
-        private static string HttpBuildQuery(IDictionary<string, string> querystring_arrays)
-        {
-            StringBuilder sb = new StringBuilder();
-            foreach (var item in querystring_arrays)
-            {
-                sb.Append(UrlEncode(item.Key));
-                sb.Append("=");
-                sb.Append(UrlEncode(item.Value));
-                sb.Append("&");
-            }
-            sb.Remove(sb.Length - 1, 1);
-            return sb.ToString();
-        }
+        
+       
 
         /// <summary>
         /// 根据AppKey,SecretKey、Url、参数计算Sk
@@ -88,8 +53,8 @@ namespace BaiduMap.Util
         /// <returns></returns>
         public static string CaculateAKSN(string ak, string sk, string url, IDictionary<string, string> querystring_arrays)
         {
-            var queryString = HttpBuildQuery(querystring_arrays);
-            var str = UrlEncode(url + "?" + queryString + sk);
+            var queryString = DictionaryUtil.HttpBuildQuery(querystring_arrays);
+            var str = DictionaryUtil.UrlEncode(url + "?" + queryString + sk);
             return MD5(str);
         }
 
@@ -108,18 +73,10 @@ namespace BaiduMap.Util
         /// <typeparam name="T"></typeparam>
         /// <param name="request"></param>
         /// <returns></returns>
-        public static string BuildQueryStringWithAkAndSn<T>(IBaiduRequest<T> request, string ak, string sk)
-            where T : BaiduResponse
+        public static string BuildQueryStringWithAkAndSn<T>(IRequest<T> request, string ak, string sk)
+            where T :IResponse
         {
             var dictionary = request.GetParameters();
-            if (request.RequiredTimestamp)
-            {
-                // 用户未设置timestamp时自动增加，若已经设置timestamp，则使用用户设置的值
-                if (!dictionary.ContainsKey("timestamp"))
-                {
-                    dictionary.Add("timestamp", DateTime.Now.ToTimestamp().ToString());
-                }
-            }
             // ak 必须是 dictionary中的最后一个参数
             if (dictionary.ContainsKey("ak"))
             {
@@ -134,7 +91,7 @@ namespace BaiduMap.Util
             var sn = CaculateAKSN(ak, sk, request.Address, dictionary);
             dictionary.Add("sn", sn);
 
-            var querystring = HttpBuildQuery(dictionary);
+            var querystring = DictionaryUtil.HttpBuildQuery(dictionary);
             return querystring;
         }
 

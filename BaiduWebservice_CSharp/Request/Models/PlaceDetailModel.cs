@@ -1,4 +1,5 @@
-﻿using BaiduMap.Attributes;
+﻿
+using Mapservice_Core;
 using System;
 using System.Collections.Generic;
 using System.Text;

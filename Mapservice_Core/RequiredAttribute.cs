@@ -1,5 +1,5 @@
 ﻿using System;
-namespace BaiduMap.Attributes
+namespace Mapservice_Core
 {
     [AttributeUsage(AttributeTargets.Property)]
     public class RequiredAttribute : Attribute

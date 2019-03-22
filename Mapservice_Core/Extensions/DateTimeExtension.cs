@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BaiduMap.Extensions
+namespace Mapservice_Core
 {
     public static class DateTimeExtension
     {

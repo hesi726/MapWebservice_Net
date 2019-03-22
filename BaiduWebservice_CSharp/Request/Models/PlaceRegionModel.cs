@@ -1,5 +1,5 @@
 ﻿using System;
-using BaiduMap.Attributes;
+using Mapservice_Core;
 
 namespace BaiduMap.Request.Models
 {

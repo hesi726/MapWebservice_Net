@@ -3,28 +3,32 @@ using System.Collections.Generic;
 using BaiduMap.Request.Models;
 using BaiduMap.Response;
 using BaiduMap.Util;
+using Mapservice_Core;
 
 namespace BaiduMap.Request
 {
-    public abstract class BaiduRequest<T, S> : IBaiduRequest<T>
-        where T: BaiduResponse 
-        where S: BaiduModel
+    public abstract class BaiduRequest<TResponse, TRequestModel> : AbstractRequest<TResponse, TRequestModel>, 
+        IBaiduRequest<TResponse>
+        where TResponse: BaiduResponse 
+        where TRequestModel: BaiduModel
     {
-        protected readonly S model;
-        public string Host { get; set; } = "http://api.map.baidu.com";
-        public string Address { get; set; }
-
-        public bool RequiredTimestamp { get; protected set; } = false;
-
-        public BaiduRequest(S model)
+        public BaiduRequest(): base()
+        {
+            this.Host = "http://api.map.baidu.com";
+        }
+        public BaiduRequest(TRequestModel model): this()
         {
             this.model = model;
         }
 
-        public virtual Dictionary<string, string> GetParameters()
-        {
-            return DictionaryUtil.GetDictionary(model);
-        }
+       
+       
+
+        public bool RequiredTimestamp { get; protected set; } = false;
+
+        
+
+      
 
     }
 }
