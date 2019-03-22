@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -14,11 +14,11 @@
     <RepositoryUrl>https://github.com/hesi726/hongbo</RepositoryUrl>
     <PackageReleaseNotes>http://www.gnu.org/licenses/licenses.en.html</PackageReleaseNotes>
     <Authors>daiwei</Authors>
-    <AssemblyVersion>0.5.0.3</AssemblyVersion>
-    <FileVersion>0.5.0.3</FileVersion>
+    <AssemblyVersion>0.5.0.4</AssemblyVersion>
+    <FileVersion>0.5.0.4</FileVersion>
     <Product>BaiduMap_Webservice_CSharp</Product>
     <PackageId>BaiduMap_Webservice_CSharp</PackageId>
-    <Version>0.5.0.3</Version>
+    <Version>0.5.0.4</Version>
     <PackageTags>c# baidu map webservice </PackageTags>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <Company>daiwei</Company>
