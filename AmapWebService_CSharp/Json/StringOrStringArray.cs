@@ -7,19 +7,19 @@ namespace AMap.Json
     /// <summary>
     /// 字符串或者字符串数组
     /// </summary>
-    public class StringOrStringArray 
+    public class SingleOrArray<T> 
     {
-        public StringOrStringArray()
+        public SingleOrArray()
         {
 
         }
 
-        public StringOrStringArray(string val)
+        public SingleOrArray(T val)
         {
             Value = val;
         }
 
-        public StringOrStringArray(string[] val)
+        public SingleOrArray(T[] val)
         {
             ValueArray = val;
         }
@@ -35,21 +35,21 @@ namespace AMap.Json
         /// <summary>
         /// 字符串值;
         /// </summary>
-        public string Value { get; set; }
+        public T Value { get; set; }
 
         /// <summary>
         /// 数组值;
         /// </summary>
-        public string[] ValueArray { get; set; }
+        public T[] ValueArray { get; set; }
 
-        public static implicit operator StringOrStringArray(string val)
+        public static implicit operator SingleOrArray<T>(T val)
         {
-            return new StringOrStringArray(val);
+            return new SingleOrArray<T>(val);
         }
 
-        public static implicit operator StringOrStringArray(string[] val)
+        public static implicit operator SingleOrArray<T>(T[] val)
         {
-            return new StringOrStringArray(val);
+            return new SingleOrArray<T>(val);
         }
     }
 }

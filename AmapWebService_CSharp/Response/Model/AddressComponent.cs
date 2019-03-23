@@ -46,12 +46,12 @@ namespace AMap.Response.Model
         /// <summary>
         /// 街道
         /// </summary>
-        public StringOrStringArray street { get; set; }
+        public SingleOrArray<string> street { get; set; }
 
         /// <summary>
         /// 门牌例如：6号
         /// </summary>
-        public StringOrStringArray number { get; set; }
+        public SingleOrArray<string> number { get; set; }
 
         /// <summary>
         /// 门牌信息列表

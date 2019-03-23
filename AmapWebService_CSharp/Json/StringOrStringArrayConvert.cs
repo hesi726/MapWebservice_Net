@@ -23,7 +23,11 @@ namespace AMap.Json
         /// <param name="cryptType"></param>
         public StringOrStringArrayConvert()
         {
-        }      
+        }
+
+        Type genericArgumentType = null;
+        Type arrayGenericArgumentType = null;
+        ConstructorInfo constructor = null;
 
         /// <summary>
         /// 能否转换
@@ -31,7 +35,13 @@ namespace AMap.Json
         /// <param name="objectType">对象的类型;</param>
         public override bool CanConvert(Type objectType)
         {            
-            return objectType == typeof(StringOrStringArray);
+            var result = objectType == typeof(SingleOrArray<>);
+            genericArgumentType = objectType.GetGenericArguments()[0];
+            arrayGenericArgumentType = Array.CreateInstance(genericArgumentType, 0).GetType(); 
+            var genericObjectType = typeof(SingleOrArray<>);
+            var xtype = genericObjectType.MakeGenericType(genericArgumentType);
+            constructor = xtype.GetConstructor(new Type[] { });
+            return result;
         }
 
         /// <summary>
@@ -40,15 +50,15 @@ namespace AMap.Json
         /// </summary>
         public override object ReadJson(JsonReader reader, Type targetType, object existingValue, JsonSerializer serializer)
         {
-            if (reader.TokenType == JsonToken.String)
+            if (reader.TokenType == JsonToken.StartArray)
             {
-                var val = serializer.Deserialize<string>(reader);
-                return new StringOrStringArray(val);
+                var retVal = serializer.Deserialize(reader, arrayGenericArgumentType);
+                return new SingleOrArray(retVal);
             }
-            else if (reader.TokenType == JsonToken.StartArray)
+            else
             {
-                var retVal = serializer.Deserialize<string[]>(reader);
-                return new StringOrStringArray(retVal);
+                var retVal = serializer.Deserialize(reader, genericArgumentType);
+                return new SingleOrArray
             }
             return null;
 

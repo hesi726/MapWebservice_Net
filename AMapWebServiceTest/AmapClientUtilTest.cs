@@ -19,7 +19,7 @@ namespace AMapWebServiceTest
             client = AMapConfig.GetClient();
             if (client == null)
             {
-                AMapConfig.AddAmapConfig("1b21a2f1c05c2f03b2ea6157b95a3b4d");
+                AMapConfig.AddAmapConfig("5f1b21a2f1c05c2f03b2ea6157b95a3b4d");
             }
             client = AMapConfig.GetClient();
             addresses = new string[]
