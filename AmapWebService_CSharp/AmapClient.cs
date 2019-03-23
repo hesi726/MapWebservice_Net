@@ -35,11 +35,11 @@ namespace AmapWebService_CSharp
 
         public override T DeserialzeObject<T>(string json)
         {
-            JsonConverter[] converts = new JsonConverter[]
-            {
-                new StringOrStringArrayConvert()
-            };
-            var result = JsonConvert.DeserializeObject<T>(json, converts);
+            //JsonConverter[] converts = new JsonConverter[]
+            //{
+            //    new StringOrStringArrayConvert()
+            //};
+            var result = JsonConvert.DeserializeObject<T>(json);
             result.Meta = json;
             return result;
         }
