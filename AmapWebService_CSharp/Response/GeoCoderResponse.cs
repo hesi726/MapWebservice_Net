@@ -11,6 +11,9 @@ namespace AMap.Response
     /// </summary>
     public class GeoCoderResponse: AMapListResultResponse<Geocode>
     {
+        /// <summary>
+        /// 响应;
+        /// </summary>
         public List<Geocode> geocodes { get; set; }
     }
 }

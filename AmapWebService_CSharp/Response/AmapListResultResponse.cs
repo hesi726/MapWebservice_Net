@@ -15,6 +15,6 @@ namespace AMap.Response
         /// </summary>
         public string count { get; set; }
 
-        public virtual List<T> Result { get; set; }
+        //public virtual List<T> Result { get; set; }
     }
 }

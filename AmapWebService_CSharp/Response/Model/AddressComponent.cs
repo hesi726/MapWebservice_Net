@@ -39,8 +39,11 @@ namespace AMap.Response.Model
 
         /// <summary>
         /// 地址所在的乡镇
+        /// 噗通的是，
+        /// 在地址解析中，township 返回空数组;
+        /// 地址逆解析中，township 返回字符串;
         /// </summary>
-        public string[] township { get; set; }
+        public SingleOrArray<string> township { get; set; }
 
 
         /// <summary>
@@ -56,12 +59,14 @@ namespace AMap.Response.Model
         /// <summary>
         /// 门牌信息列表
         /// </summary>
-        public string[] streetNumber { get; set; }
+        public StreetNumber streetNumber { get; set; }
 
         /// <summary>
-        /// 
+        /// 噗通,
+        /// 有时候是 BusinessArea 数组，例如 [{location: ''}
+        /// 有时候是 空数组， 例如解析，113.252417,23.2461431 返回 [[]]
         /// </summary>
-        public Dictionary<string, BusinessArea> businessAreas { get; set; }
+        public List<SingleOrArray<BusinessArea>> businessAreas { get; set; }
 
         /// <summary>
         /// level
@@ -81,6 +86,6 @@ namespace AMap.Response.Model
         /// <summary>
         /// 临近信息;
         /// </summary>
-        public Building neighborhood { get; set; }
+        public Neighborhood neighborhood { get; set; }
     }
 }

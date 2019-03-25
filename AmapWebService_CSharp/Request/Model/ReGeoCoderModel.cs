@@ -16,7 +16,7 @@ namespace AMap.Request.Models
         /// </summary>
         public ReGeoCoderModel()
         {
-           
+            this.radius = 200;
         }
 
         /// <summary>
@@ -29,7 +29,12 @@ namespace AMap.Request.Models
         public string location { get; set; }
 
         /// <summary>
-        /// 
+        /// 以下内容需要 extensions 参数为 all 时才生效。
+        ///逆地理编码在进行坐标解析之后不仅可以返回地址描述，
+        ///也可以返回经纬度附近符合限定要求的POI内容（在 extensions 字段值为 all 时才会返回POI内容）。
+        ///设置 POI 类型参数相当于为上述操作限定要求。
+        ///参数仅支持传入POI TYPECODE，可以传入多个POI TYPECODE，
+        ///相互之间用“|”分隔。该参数在 batch 取值为 true 时不生效。获取 POI TYPECODE 可以参考POI分类码表
         /// </summary>
         public string poitype { get; set; }
 
@@ -38,8 +43,14 @@ namespace AMap.Request.Models
         /// batch 参数设置为 true 时进行批量查询操作，最多支持 20 个经纬度点进行批量地址查询操作。
         /// batch 参数设置为 false 时进行单点查询，此时即使传入多个经纬度也只返回第一个经纬度的地址解析查询结果。
         /// </summary>
-        [Required]
-        public bool? batch { get; set; }
+        public bool? batch
+        {
+            get
+            {
+                if (location.IndexOf("|") >= 0) return true;
+                return null;
+            }
+        }
 
         /// <summary>
         /// 是否优化POI返回顺序,
@@ -49,7 +60,6 @@ namespace AMap.Request.Models
         ///1：综合大数据分析将居家相关的 POI 内容优先返回，即优化返回结果中 pois 字段的poi顺序。
         ///2：综合大数据分析将公司相关的 POI 内容优先返回，即优化返回结果中 pois 字段的poi顺序。
         /// </summary>
-        [Required]
         public int homeorcorp { get; set; } = 2;
 
         /// <summary>
@@ -65,7 +75,6 @@ namespace AMap.Request.Models
         /// 当roadlevel=0时，显示所有道路
         /// 当roadlevel = 1时，过滤非主干道路，仅输出主干道路数据
         /// </summary>
-        [Required]
         public int? roadlevel { get; set; }
     }
 }

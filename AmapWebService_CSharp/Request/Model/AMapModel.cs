@@ -2,6 +2,9 @@
 
 namespace AMap.Request.Models
 {
+    /// <summary>
+    /// 基本的请求类，只有一个属性， Output=json (默认使用 json 方式输出请求;
+    /// </summary>
     public abstract class AMapModel
     {
         /// <summary>
