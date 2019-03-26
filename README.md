@@ -1,4 +1,5 @@
-# BaiduMapWebservice
+# BaiduMapWebservice &amp; AMapWebservice
+百度和高德的地图调用接口;
 
 百度地图WEBSERVICE 的 C# 调用接口( 基本上代码复制自 （https://github.com/Seamas/BaiduMapWebApi ）)，
 为避开百度地图WEBSERVICE 调用次数限制，支持多个 百度地图 WEBSERVICE 的 appid 
@@ -21,8 +22,8 @@ BaiduMapConfig.AddBaiduMapConfig("Ar0P3ZtGzAbdDRvacMWUVvvHtjtftoWI", "iLY3xsGGI1
  大家可以 clone 代码自行修改（请注意版权协议, http://www.gnu.org/licenses/licenses.zh-cn.html)
  大家如果想要修改，可以留言, 告诉我你的 github 账号，来一起进行修改; 
 
- #AMapWebservice
+ 
  高德地图Webservice 的 c# 调用接口; 暂时只实现地址解析 和地址逆解析 2个，因为我们公司只用到这2个；
-  //全局配置高德的 AppId 和 SecretKey,  
-  AMapConfig.AddAmapConfig("511b21a2f1c05c2f03b2ea6157b95a3b4d");  //amap key is error, please assign your app key;
-  var firstGeo = AMapClientUtil.GetGeoResult("方恒国际中心A座", "北京");
+ //全局配置高德的 AppId 和 SecretKey,  
+ AMapConfig.AddAmapConfig("511b21a2f1c05c2f03b2ea6157b95a3b4d");  //amap key is error, please assign your app key;
+ var firstGeo = AMapClientUtil.GetGeoResult("方恒国际中心A座", "北京");
