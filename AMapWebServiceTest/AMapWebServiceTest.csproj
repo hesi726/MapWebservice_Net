@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AmapWebService_CSharp\AmapWebService_CSharp.csproj" />
+    <ProjectReference Include="..\AmapWebService_CSharp\AmapWebService.csproj" />
   </ItemGroup>
 
 </Project>

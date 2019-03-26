@@ -59,9 +59,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BaiduWebservice_CSharp\BaiduMapWebservice_CSharp.csproj">
+    <ProjectReference Include="..\BaiduWebservice_CSharp\BaiduMapWebservice.csproj">
       <Project>{6a0a28e2-f304-47fb-ba61-cce2d21da50d}</Project>
-      <Name>BaiduMapWebservice_CSharp</Name>
+      <Name>BaiduMapWebservice</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
