@@ -14,14 +14,14 @@ namespace AMap.Json
     /// <summary>
     /// StringOrStringArrayConvert ：  可能为字符串 或者 字符串数组 的类;
     /// </summary>
-    public class StringOrStringArrayConvert : JsonConverter
+    public class SingleOrArrayConverter : JsonConverter
     {
         /// <summary>
         /// 构造函数
         /// </summary>
         /// <param name="allowNull"></param>
         /// <param name="cryptType"></param>
-        public StringOrStringArrayConvert()
+        public SingleOrArrayConverter()
         {
         }
         /// <summary>

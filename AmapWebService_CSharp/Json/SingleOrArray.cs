@@ -9,7 +9,7 @@ namespace AMap.Json
     /// 字符串或者字符串数组
     /// </summary>
     /// 定义此标注时，将不会再调用 StringOrStringArrayConvert 中的 CanConvert 方法;
-    [JsonConverter(typeof(StringOrStringArrayConvert))]
+    [JsonConverter(typeof(SingleOrArrayConverter))]
     public class SingleOrArray<T> 
     {
         //public SingleOrArray()
