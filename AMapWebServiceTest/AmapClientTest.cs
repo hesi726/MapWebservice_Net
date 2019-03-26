@@ -1,6 +1,7 @@
-using AMap.Response;
-using AmapWebService_CSharp;
+using AMapWebservice.Response;
+using AMapWebservice;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Newtonsoft.Json;
 using System.Linq;
 
 namespace AMapWebServiceTest
@@ -63,21 +64,21 @@ namespace AMapWebServiceTest
         public void DeserialzeSingleOrArrayObject()
         {
             var json = @"{""Name"": ""daiwei""}";
-            var singleOrArray = client.DeserialzeObject<SingleOrArrayResponse>(json);
+            var singleOrArray = JsonConvert.DeserializeObject<SingleOrArrayResponse>(json);
             Assert.IsTrue(singleOrArray.Name.Value == "daiwei");
 
             json = @"{""Name"": ""daiwei"",""Age"": 20}";
-            singleOrArray = client.DeserialzeObject<SingleOrArrayResponse>(json);
+            singleOrArray = JsonConvert.DeserializeObject<SingleOrArrayResponse>(json);
             Assert.IsTrue(singleOrArray.Name.Value == "daiwei");
             Assert.IsTrue(singleOrArray.Age.Value == 20);
 
             json = @"{""Name"": null}";
-            singleOrArray = client.DeserialzeObject<SingleOrArrayResponse>(json);
+            singleOrArray = JsonConvert.DeserializeObject<SingleOrArrayResponse>(json);
             Assert.IsTrue(singleOrArray.Name == null);
             Assert.IsTrue(singleOrArray.Age == null);
 
             json = @"{""Name"": [""daiwei"",""Zhao""], ""Age"": [18,20]}";
-            singleOrArray = client.DeserialzeObject<SingleOrArrayResponse>(json);
+            singleOrArray = JsonConvert.DeserializeObject<SingleOrArrayResponse>(json);
             Assert.IsTrue(singleOrArray.Name.ValueArray[0] == "daiwei");
             Assert.IsTrue(singleOrArray.Name.ValueArray[1] == "Zhao");
 

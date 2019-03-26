@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>AMapWebservice</AssemblyName>
+    <RootNamespace>AMapWebservice</RootNamespace>
+    <Description>高德地图的Webservice的c#包</Description>
+    <Copyright>http://www.gnu.org/licenses/licenses.en.html</Copyright>
+    <PackageProjectUrl>https://github.com/hesi726/MapWebservice_Net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/hesi726/MapWebservice_Net</RepositoryUrl>
+    <PackageLicenseUrl>http://www.gnu.org/licenses/licenses.en.html</PackageLicenseUrl>
+    <LicenseUrl>http://www.gnu.org/licenses/licenses.en.html</LicenseUrl>
+    <AssemblyVersion>0.5.0.1</AssemblyVersion>
+    <FileVersion>0.5.0.1</FileVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>0.5.0.1</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CoreMapWebservice\CoreMapWebservice.csproj" />
+  </ItemGroup>
+</Project>

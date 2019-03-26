@@ -1,7 +1,7 @@
-using AMap.Request;
-using AMap.Request.Models;
-using AMap.Util;
-using AmapWebService_CSharp;
+using AMapWebservice.Request;
+using AMapWebservice.Request.Models;
+using AMapWebservice.Util;
+using AMapWebservice;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Linq;

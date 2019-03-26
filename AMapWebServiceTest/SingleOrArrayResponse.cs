@@ -1,5 +1,4 @@
-﻿using AMap.Json;
-using Mapservice_Core;
+﻿using AMapWebservice.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,7 +8,7 @@ namespace AMapWebServiceTest
     /// <summary>
     /// 
     /// </summary>
-    public class SingleOrArrayResponse : IResponse
+    public class SingleOrArrayResponse 
     {
         public SingleOrArray<string> Name { get; set; }
 
