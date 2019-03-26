@@ -22,5 +22,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CoreMapWebservice\CoreMapWebservice.csproj" />
+    <ProjectReference Include="..\hongbo.json\hongbo.json.csproj" />
   </ItemGroup>
 </Project>

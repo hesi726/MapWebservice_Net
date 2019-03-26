@@ -19,8 +19,6 @@ BaiduMapConfig.AddBaiduMapConfig("Ar0P3ZtGzAbdDRvacMWUVvvHtjtftoWI", "iLY3xsGGI1
  var request = new ReGeoCoderRequest(model);  
  ReGeoCoderResponse result = client.Execute(request);  
 
- 大家可以 clone 代码自行修改（请注意版权协议, http://www.gnu.org/licenses/licenses.zh-cn.html)
- 大家如果想要修改，可以留言, 告诉我你的 github 账号，来一起进行修改; 
 
  
  高德地图Webservice 的 c# 调用接口; 暂时只实现地址解析 和地址逆解析 2个，因为我们公司只用到这2个；

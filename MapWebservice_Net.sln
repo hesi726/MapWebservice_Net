@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreMapWebservice", "CoreMa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AMapWebserviceTest", "AMapWebServiceTest\AMapWebserviceTest.csproj", "{7AEDC425-E2CC-4825-9EB4-0B0DC8ACDFD5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hongbo.json", "hongbo.json\hongbo.json.csproj", "{46BE4B48-6226-4B8E-BB7D-B59E5B4F1E24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hongbo.json.test", "hongbo.json.test\hongbo.json.test.csproj", "{32ED15C9-8531-4969-9A72-640AA4F36362}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{7AEDC425-E2CC-4825-9EB4-0B0DC8ACDFD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AEDC425-E2CC-4825-9EB4-0B0DC8ACDFD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AEDC425-E2CC-4825-9EB4-0B0DC8ACDFD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46BE4B48-6226-4B8E-BB7D-B59E5B4F1E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46BE4B48-6226-4B8E-BB7D-B59E5B4F1E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46BE4B48-6226-4B8E-BB7D-B59E5B4F1E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46BE4B48-6226-4B8E-BB7D-B59E5B4F1E24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32ED15C9-8531-4969-9A72-640AA4F36362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32ED15C9-8531-4969-9A72-640AA4F36362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32ED15C9-8531-4969-9A72-640AA4F36362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32ED15C9-8531-4969-9A72-640AA4F36362}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

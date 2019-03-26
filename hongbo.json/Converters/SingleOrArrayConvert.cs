@@ -1,18 +1,12 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Globalization;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace AMapWebservice.Json
+namespace hongbo.json.Converters
 {
     /// <summary>
-    /// StringOrStringArrayConvert ：  可能为字符串 或者 字符串数组 的类;
+    /// StringOrStringArrayConvert ：  
+    /// 对 SingleOrArray 属性进行 Json转换的类;
     /// </summary>
     public class SingleOrArrayConverter : JsonConverter
     {
