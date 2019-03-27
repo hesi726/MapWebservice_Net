@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>hongbo.json 的  Json 工具包，对 newtonsoft 进行了一些扩展;</Description>
+    <AssemblyVersion>0.19.0327.1807</AssemblyVersion>
+    <FileVersion>0.19.0327.1807</FileVersion>
+    <Version>0.19.0327</Version>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,7 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Attributes\" />
+    <Reference Include="System.ComponentModel.Annotations">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.2.0\ref\netcoreapp2.2\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
