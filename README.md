@@ -21,7 +21,8 @@ BaiduMapConfig.AddBaiduMapConfig("Ar0P3ZtGzAbdDRvacMWUVvvHtjtftoWI", "iLY3xsGGI1
 
 
  
- 高德地图Webservice 的 c# 调用接口; 暂时只实现地址解析 和地址逆解析 2个，因为我们公司只用到这2个；
- //全局配置高德的 AppId 和 SecretKey,  
- AMapConfig.AddAmapConfig("511b21a2f1c05c2f03b2ea6157b95a3b4d");  //amap key is error, please assign your app key;
- var firstGeo = AMapClientUtil.GetGeoResult("方恒国际中心A座", "北京");
+ 高德地图Webservice 的 c# 调用接口; 
+ 暂时只实现地址解析 和地址逆解析 2个,因为我们公司只用到这2个,   
+ //全局配置高德的 AppId 和 SecretKey,    
+ AMapConfig.AddAmapConfig("511b21a2f1c05c2f03b2ea6157b95a3b4d");  //amap key is error, please assign your app key  
+ var firstGeo = AMapClientUtil.GetGeoResult("方恒国际中心A座", "北京");  
