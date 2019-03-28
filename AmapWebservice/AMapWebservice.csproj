@@ -7,7 +7,7 @@
     <Description>高德地图的Webservice的c#包</Description>
     <Copyright>http://www.gnu.org/licenses/licenses.en.html</Copyright>
     <PackageProjectUrl>https://github.com/hesi726/MapWebservice_Net</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/hesi726/MapWebservice_Net</RepositoryUrl>
+    <RepositoryUrl>https://github.com/hesi726/MapWebservice_Net/tree/master/AmapWebservice</RepositoryUrl>
     <PackageLicenseUrl>http://www.gnu.org/licenses/licenses.en.html</PackageLicenseUrl>
     <LicenseUrl>http://www.gnu.org/licenses/licenses.en.html</LicenseUrl>
     <AssemblyVersion>0.5.0.1</AssemblyVersion>

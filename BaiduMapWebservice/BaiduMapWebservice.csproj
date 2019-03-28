@@ -12,7 +12,7 @@
     <LicenseUrl>http://www.gnu.org/licenses/licenses.en.html</LicenseUrl>
     <Copyright>http://www.gnu.org/licenses/licenses.en.html</Copyright>
     <PackageProjectUrl>https://github.com/hesi726/MapWebservice_Net</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/hesi726/MapWebservice_Net</RepositoryUrl>
+    <RepositoryUrl>https://github.com/hesi726/MapWebservice_Net/tree/master/BaiduMapWebservice</RepositoryUrl>
     <PackageReleaseNotes>http://www.gnu.org/licenses/licenses.en.html</PackageReleaseNotes>
     <Authors>daiwei</Authors>
     <AssemblyVersion>0.5.0.6</AssemblyVersion>
