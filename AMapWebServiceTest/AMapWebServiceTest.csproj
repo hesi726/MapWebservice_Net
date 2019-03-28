@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AmapWebservice\AMapWebservice.csproj" />
-    <ProjectReference Include="..\hongbo.json\hongbo.json.csproj" />
   </ItemGroup>
 
 </Project>

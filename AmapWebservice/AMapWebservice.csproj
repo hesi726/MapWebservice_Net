@@ -17,11 +17,11 @@
     <Version>0.5.0.1</Version>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="hongbo.json" Version="0.19.11.834" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CoreMapWebservice\CoreMapWebservice.csproj" />
-    <ProjectReference Include="..\hongbo.json\hongbo.json.csproj" />
   </ItemGroup>
 </Project>
